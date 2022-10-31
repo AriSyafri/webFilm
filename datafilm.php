@@ -1,7 +1,7 @@
 <?php
     $film2 = htmlspecialchars($_GET["film2"]);
     $film2 = str_replace(' ', '+', strtolower($film2));
-    $sumber2 = "http://www.omdbapi.com/?apikey=b844798a&t='$film2'";
+    $sumber2 = "http://www.omdbapi.com/?apikey="ganti apikey"&t='$film2'";
     $konten2 = file_get_contents($sumber2);
     $data2 = json_decode($konten2,true);
 
