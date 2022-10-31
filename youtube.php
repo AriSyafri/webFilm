@@ -5,7 +5,7 @@ if(isset($_POST['cari'])) {
     $film = str_replace(' ', '+', strtolower($film));
 
     if(!empty($_POST["film"])) {
-        $sumber = "https://www.googleapis.com/youtube/v3/search?key=AIzaSyBHRV-rLqOnHnD8iO2TvlSDdRUeFJQyc90&part=snippet&type=video&q=$film";
+        $sumber = "https://www.googleapis.com/youtube/v3/search?key="#apikey youtube ganti#"&part=snippet&type=video&q=$film";
         $konten = file_get_contents($sumber);
         $data = json_decode($konten,true);
         $data = $data['items'];
