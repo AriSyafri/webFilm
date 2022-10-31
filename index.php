@@ -4,7 +4,7 @@
 	if(isset($_POST['cari'])) {
 		$film = htmlspecialchars($_POST["film"]);
 		if(!empty($_POST["film"])) {
-			$sumber = "http://www.omdbapi.com/?apikey=b844798a&s='$film'";
+			$sumber = "http://www.omdbapi.com/?apikey="ganti disini apikey"='$film'";
 			$konten = file_get_contents($sumber);
 			$data = json_decode($konten,true);
 			$data = $data["Search"];
