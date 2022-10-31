@@ -3,7 +3,7 @@
     $film = htmlspecialchars($_GET["film"]);
     $film = str_replace(' ', '+', strtolower($film));
 
-    $sumber = "https://www.googleapis.com/youtube/v3/search?key=AIzaSyBHRV-rLqOnHnD8iO2TvlSDdRUeFJQyc90&part=snippet&maxResults=25&type=video&q=$film";
+    $sumber = "https://www.googleapis.com/youtube/v3/search?key="#ganti apikey disini#"&part=snippet&maxResults=25&type=video&q=$film";
     $konten = file_get_contents($sumber);
     $data = json_decode($konten,true);
     $data = $data['items'];
